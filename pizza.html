@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+   <head>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+      <link rel="stylesheet" href="css/styles.css" />
+      <link rel="shortcut icon" href="images/favicon.ico" />
+      <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+      <title>Pizza House | Pizza</title>
+   </head>
+
+   <body>
+
+      <nav class="navbar sticky-top navbar-expand-md navbar-light">
+         <a class="navbar-brand" href="index.html">Pizza House</a>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+               <li class="nav-item">
+                  <a class="nav-link" href="index.html">Home</a>
+               </li>
+               <li class="nav-item active">
+                  <a class="nav-link" href="build.html">Build</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="learn.html">Learn</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="about.html">About</a>
+               </li>
+            </ul>
+         </div>
+      </nav>
+
+      <div id="page-container">
+         <div id="content-wrap">
+            <center>
+               <div class="line"></div>
+               <br>
+               <h1 id="title">Pizza</h1>
+            </center>
+
+            <a href="build.html">
+               <button class="back-button button">Back</button>
+            </a>
+
+            <section class="about-box">
+               <div id="product-img" class="box">
+                  <img id="product-pic" src="images/tomato-icon.png" />
+               </div>
+
+               <div></div>
+
+               <div class="box word-box">
+                  <br>
+                  <h3>$16.00</h3>
+                  <br>
+
+                  <p>
+                     This specialty pizza comes with our famous red tomato sauce, lots of cheese
+                     and pepperoni that is like no other.
+                  </p>
+
+                  <br>
+
+                  Size:
+                  <select name="size">
+                     <option value="Small">Small 8"</option>
+                     <option value="Medium">Medium 12"</option>
+                     <option value="Large" selected>Large 16"</option>
+                     <option value="Extra Large">Extra Large 20"</option>
+                  </select>
+
+                  <br><br><br>
+
+                  <center>
+                     <button class="order-button button">Add to Order</button>
+                  </center>
+
+
+               </div>
+            </section>
+
+         </div>
+
+         <footer id="footer">
+            <br>
+            <center>
+               <p id="footer-header"><strong>Pizza House<strong></p>
+               <p class="footer-menu">
+                  <a class="footer-link" href="index.html">Home</a> |
+                  <a class="footer-link" href="build.html">Build</a> |
+                  <a class="footer-link" href="learn.html">Learn</a> |
+                  <a class="footer-link" href="about.html">About</a>
+               </p>
+               <p id="source-code-link">Find souce code <a href="https://github.com/kyleokolowitz/pizzahouse">here.</a></p>
+            </center>
+         </footer>
+      </div>
+
+      <script>
+         const queryString = window.location.search;
+         const urlParams = new URLSearchParams(queryString);
+         const name = urlParams.get('pizza')
+         console.log(name);
+
+         document.getElementById("title").innerHTML = name;
+         document.getElementById("product-img").innerHTML = '<img id="product-pic" src="images/' + name + '.jpg" />';
+      </script>
+
+
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+   </body>
+
+</html>
